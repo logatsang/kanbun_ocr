@@ -1,1 +1,7 @@
 raw_data/LDC2017T14.txt
+*.ttf
+tools/img
+tools/*.txt
+imgui.ini
+./*.txt
+__pycache__
