@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
 </head>
-<body>
+<body data-bs-theme="dark">
 
     <div class="container">
         <div class="row">
@@ -14,14 +14,23 @@
                 <div class="m-3">
                     <div class="card w-100" style="width: 18rem;">
                         <div class="card-header">
-                            Page <span id="page_number">0</span>
+                            Page <span id="page-number">0</span>
                         </div>
                         <div class="card-body">
                             <img
-                                class="img-fluid"
+                                id="page-display"
+                                class="img-fluid mb-3"
                                 src="img/0100.jpg"
                                 width=""
                                 />
+                            <div class="btn-group w-100" role="group">
+                                <button type="button" class="btn btn-primary" onclick="pageChange(-1)">
+                                    <i class="bi bi-arrow-left"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary" onclick="pageChange(+1)">
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                       </div>
                 </div>
@@ -33,7 +42,7 @@
                             Input
                         </div>
                         <div class="card-body">
-                            <textarea id="text-field" class="form-control" rows="10" style="resize: vertical;"></textarea>
+                            <textarea id="text-field" class="form-control" rows="8" style="resize: vertical; font-size: 36px; writing-mode: vertical-rl;"></textarea>
                         </div>
                       </div>
                 </div>
@@ -44,17 +53,17 @@
                         </div>
                         <div class="card-body">
                             
-                            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-toolbar justify-content-start" role="toolbar">
                                 <div class="btn-group me-2" role="group">
-                                    <button type="button" class="btn btn-outline-secondary" onclick="indexChange(-1)">
+                                    <button type="button" class="btn btn-primary" onclick="indexChange(-1)">
                                         <i class="bi bi-arrow-left"></i>
                                     </button>
                                 </div>
                                 <div id="char-buttons" class="btn-group me-2" role="group">
-                                    <button type="button" class="btn btn-outline-secondary">0</button>
+                                    <button type="button" class="btn btn-primary">0</button>
                                 </div>
                                 <div class="btn-group ml-auto" role="group">
-                                    <button type="button" class="btn btn-outline-secondary" onclick="indexChange(+1)">
+                                    <button type="button" class="btn btn-primary" onclick="indexChange(+1)">
                                         <i class="bi bi-arrow-right"></i>
                                     </button>
                                 </div>
